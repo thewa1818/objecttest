@@ -29,3 +29,33 @@ const manzai = (combi) => {
 
 manzai(downtown);
 // manzai(chidori);
+
+//分割代入
+const scores = [10, 20, 30, 40, 50];
+
+//配列の中身に一気にコンスト名決めれちゃう
+const [first, second, third, fourth] = scores;
+
+console.log(second);
+
+// 分割代入を使って中身を入れ替える
+let start = "tokyo";
+let goal = "miyagi";
+
+console.log(start);
+
+[goal, start] = [start, goal];
+
+console.log(start);
+
+const moreScores = [60, 70];
+
+//スプレッド構文
+const scores2 = [10, 20, 30, 40, 50, ...moreScores];
+//レスト構文
+const [first2, ...others] = scores2;
+
+console.log(first2);
+console.log(others);
+
+console.log(scores2);

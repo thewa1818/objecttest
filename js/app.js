@@ -60,6 +60,10 @@ console.log(others);
 
 console.log(scores2);
 
+//
+
+const lists = $("#lists");
+
 const items = [
   {
     name: "パソコン",
@@ -75,6 +79,12 @@ const items = [
   },
 ];
 
-items.map((item) => {
-  return console.log(`${item.name}の値段は${item.price / 10000}万円です`);
+const itemList = items.map((item) => {
+  return `${item.name}の値段は${item.price / 10000}万円です<br>`;
 });
+
+items.push({ name: "ケーブル", price: 20000 });
+
+lists.append(itemList);
+
+console.log(items);

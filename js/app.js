@@ -59,3 +59,22 @@ console.log(first2);
 console.log(others);
 
 console.log(scores2);
+
+const items = [
+  {
+    name: "パソコン",
+    price: 10000,
+  },
+  {
+    name: "ケータイ",
+    price: 20000,
+  },
+  {
+    name: "テレビ",
+    price: 30000,
+  },
+];
+
+items.map((item) => {
+  return console.log(`${item.name}の値段は${item.price / 10000}万円です`);
+});

@@ -79,12 +79,27 @@ const items = [
   },
 ];
 
-const itemList = items.map((item) => {
-  return `${item.name}の値段は${item.price / 10000}万円です<br>`;
+const tsuika = { name: "ケーブル", price: 20000 };
+
+items.push(tsuika);
+
+items[0].price = 30000;
+items[1].price = 10000;
+items[2].price = 50000;
+items[3].price = 2000;
+
+// const itemList = items.map((item) => {
+//   return `${item.name}の値段は${item.price / 10000}万円です<br>`;
+// });
+
+// lists.append(itemList);
+
+const itemList2 = items.map((item) => {
+  if (item.price.toString().length === 5) {
+    return `${item.name}の値段は${item.price / 10000}万円です<br>`;
+  } else {
+    return `${item.name}の値段は${item.price / 1000}千円です<br>`;
+  }
 });
 
-items.push({ name: "ケーブル", price: 20000 });
-
-lists.append(itemList);
-
-console.log(items);
+lists.html(itemList2);
